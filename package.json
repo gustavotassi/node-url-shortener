@@ -2,12 +2,27 @@
   "name": "node-url-shortener",
   "version": "1.0.0",
   "description": "NodeJS URL Shortener",
-  "main": "index.js",
   "author": "Gustavo Tassi Souza",
+  "contributors": [
+    {
+      "email": "lucastassisouza@gmail.com",
+      "name": "Lucas Tassi Souza",
+      "url": "https://github.com/lucastso"
+    }
+  ],
   "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts"
+  },
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/uuid": "^8.3.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
   }
 }

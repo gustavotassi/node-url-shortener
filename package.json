@@ -1,0 +1,13 @@
+{
+  "name": "node-url-shortener",
+  "version": "1.0.0",
+  "description": "NodeJS URL Shortener",
+  "main": "index.js",
+  "author": "Gustavo Tassi Souza",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+  }
+}

@@ -2,7 +2,11 @@
     "name": "node-url-shortener",
     "version": "1.0.0",
     "description": "NodeJS URL Shortener",
-    "author": "Gustavo Tassi Souza",
+    "author": {
+        "email": "souzagustavotassi@gmail.com",
+        "name": "Gustavo Tassi Souza",
+        "url": "https://github.com/gustavotassi"
+    },
     "contributors": [
         {
             "email": "lucastassisouza@gmail.com",

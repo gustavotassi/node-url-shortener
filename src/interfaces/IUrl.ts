@@ -6,8 +6,7 @@
  * @param {{name: string}} date - Creation date
  */
 export interface IUrl {
-    id: string;
     longUrl: string;
     shortUrl: string;
-    date: string;
+    date?: string;
 }

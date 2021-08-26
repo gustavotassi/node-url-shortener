@@ -2,7 +2,6 @@ import mongoose from '../config/database';
 import { IUrl } from '../interfaces';
 
 const schema = new mongoose.Schema({
-    id: { type: String, required: true },
     longUrl: { type: String, required: true },
     shortUrl: { type: String, required: true },
     date: {

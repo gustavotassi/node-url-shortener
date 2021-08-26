@@ -7,21 +7,28 @@ const urlService = new UrlService();
 redirectRouter.get('/:code', async (request, response) => {
     const { code } = request.params;
 
-    try {
-        const url = await urlService.findByLongUrl(code);
+    urlService
+        .findByLongUrl(code)
+        .then((url) => {
+            if (!url) {
+                return response.status(404).json({
+                    error: 'Short URL not found',
+                });
+            }
 
-        if (!url) {
-            return response.status(404).json({
-                error: 'Short URL not found!',
+            const long = url.get('longUrl');
+
+            if (url && !long) {
+                return response.status(404).json({
+                    error: 'Base URL not found',
+                });
+            }
+
+            return response.redirect(long);
+        })
+        .catch(() => {
+            return response.status(400).json({
+                error: 'Failed to fetch short URL',
             });
-        }
-
-        console.log(url);
-
-        return response.redirect('url');
-    } catch (error) {
-        return response.status(400).json({
-            error: 'Failed to fetch short URL!',
         });
-    }
 });

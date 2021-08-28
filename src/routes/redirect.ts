@@ -27,7 +27,7 @@ redirectRouter.get('/:code', async (request, response) => {
             return response.redirect(long);
         })
         .catch(() => {
-            return response.status(400).json({
+            return response.status(500).json({
                 error: 'Failed to fetch short URL',
             });
         });
